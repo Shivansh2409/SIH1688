@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: rgb(250, 251, 255);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#cursor {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(84, 221, 255, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+
+#cursor-blur {
+  height: 400px;
+  width: 400px;
+  background-color: rgba(84, 221, 255, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(40px);
+  z-index: 9;
+}
+
+#nav {
+  height: 145px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  z-index: 99;
+}
+#nav img {
+  height: 75px;
+}
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: fixed;
+}
+
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 100px;
+  font-weight: 900;
+  position: relative;
+}
+#page1 h1::before {
+  content: "JAL JEEWAN MISSION";
+  position: absolute;
+  color: rgba(107, 198, 221, 0.3);
+  top: -px;
+  left: -6px;
+  -webkit-text-stroke: 2px rgb(84, 221, 255, 0.3);
+  z-index: -1;
+}
+
+#page1 h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#page1 p {
+  font-size: 30px;
+  font-weight: 500;
+  width: 40%;
+}
+#page2 {
+  min-height: 50vh;
+  width: 100%;
+}
+
+#scroller {
+  /*background-color: rgb(49, 189, 214);*/
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-right: 10px;
+  transition: all linear 0.5s;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(84, 221, 255, 0.3);
+}
+#scroller h4:hover {
+  color: rgb(84, 221, 255, 0.3);
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#about-JJM {
+  height: 40vh;
+  width: 100%;
+  /* background-color: red; */
+  padding: 0 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+  
+}
+#about-JJM img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+#about-JJM-in {
+  width: 40%;
+  text-align: center;
+}
+#about-JJM-in h3 {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  
+}
+#about-JJM-in p {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 26px;
+}
+#cards-container {
+  /* background-color: red; */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 80%;
+  width: 24%;
+  background-color: rgba(22, 43, 48, 0.3);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+  overflow: visible; /* Allows content to be fully visible */
+  white-space: normal; /* Ensures that long text wraps to the next line */
+  word-wrap: break-word;
+  
+}
+#card-link {
+  position: absolute; 
+  top: 0;           
+  left: 0;          
+  right: 0;         
+  bottom: 0;        
+  text-decoration: none; 
+}
+#card2 a{
+  z-index: 100;
+}
+
+.card h4 {
+  white-space: normal; /* Allows text to wrap inside the card */
+  word-wrap: break-word; /* Forces long words to break */
+}
+#card1 {
+  background-image: url(https://i.pinimg.com/originals/3e/df/4e/3edf4e5cfcc94dbf471a53184deb0cb7.jpg);
+}
+#card2 {
+  background-image: url(https://i.pinimg.com/originals/cb/b3/04/cbb3045d986d95b8a45e34ea94af8d60.jpg);
+}
+#card3 {
+  background-image: url(https://i.pinimg.com/originals/ef/35/a9/ef35a91598a839530f590657a1caa26b.jpg);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(31, 55, 129, 0.3);  
+  padding: 50px;
+  padding-top: 170px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h4 {
+  color: rgb(247, 244, 244) !important;
+  font-size: 40px !important;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.overlay p {
+  color: rgb(247, 244, 244);
+  font-size: 20px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover {
+  transform: rotate3d(1, 1, 0, 20deg); /* Rotate on hover */
+}
+#green-div {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  /*background-color: red;*/
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, rgb(132, 219, 245), rgb(55, 59, 121));
+}
+#green-div h4 {
+  width: 45%;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 800;
+  color: rgb(247, 243, 243);
+  font-size: 27px;
+  text-transform: uppercase;
+}
+#green-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 14%;
+}
+#page3 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+#page3 > p {
+  font-size: 50px;
+  font-weight: 700;
+  width: 60%;
+  line-height: 45px;
+  text-align: center;
+}
+#page3 img {
+  position: absolute;
+  height: 60px;
+}
+#page3 #colon1 {
+  left: 15%;
+  top: 25%;
+}
+#page3 #colon2 {
+  bottom: 30%;
+  right: 15%;
+}
+#page4 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+.elem {
+  height: 70%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(22, 43, 48, 0.3);
+  display: flex;
+  color: #000;
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+}
+#page4 h1 {
+  font-size: 100px;
+  position: absolute;
+  top: -15%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+}
+#footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #3a86a3 0%, rgb(84, 221, 255, 0.3));
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+#footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+#f1 img {
+  height: 100px;
+}
+#f1,
+#f2,
+#f3 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+  /* background-color: red; */
+}
+#f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+#f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}

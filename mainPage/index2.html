@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo"><div class="img"></div></div>
+        <div class="nav-content">Jal Jeevan Mission - Har Ghar Jal</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        
+        <div class="dashboard">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <div class="profile">
+                    <div class="user-photo">
+                        <img src="men.webp" alt="User Photo">
+                    </div>
+                    <div class="user-details">
+                        <div class="info">Randeep</div>
+                        <div class="info">contect</div>
+                        <div type="button" class="info">Email</div>
+                    </div>
+                    <div class="settings">
+                        <div class="slider">
+                            <div class="info">Temp</div>
+                            <span>6.5°</span>
+                        </div>
+                        <button class="pay-bill">Pay Bill</button>
+                        <div class="usage-item"><b>History</b>
+                            <br><P>Last Month: Rs. 753/-</P><br>
+                            <p> August:Rs. 876/-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <h2>User Profile</h2>
+                <div class="circular-chart">
+                    <canvas id="usageChart"></canvas>
+                </div>
+    
+                <div class="usage-grid">
+                    <div class="usage-item">
+                        <p>Water Usage</p>
+                        <p>6.22 Liters</p>
+                    </div>
+                    <div class="usage-item">
+                        <p>Water Usage</p>
+                        <p>6.62 Liters</p>
+                    </div>
+                    <div class="usage-item">
+                        <p>Water Usage</p>
+                        <p>6.69 Liters</p>
+                    </div>
+                    <div class="usage-item">
+                        <p>Water Usage</p>
+                        <p>6.09 Liters</p>
+                    </div>
+                </div>
+                <div class="line-chart">
+                    <canvas id="waterUsageChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We provide a comprehensive feature set for real-time data management, improving rural water supply systems.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <h2>Our Features</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Automation</h3>
+                <p>Streamline your processes with automation and predictive maintenance.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Real-Time Data</h3>
+                <p>Access real-time data for efficient decision making and monitoring.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Centralized Finance</h3>
+                <p>Manage financial operations from a single platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" method="post">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
